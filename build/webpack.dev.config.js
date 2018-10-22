@@ -12,12 +12,6 @@ var plugins = [
             NODE_ENV: JSON.stringify("development")
         }
     }),
-    new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery',
-        'window.$': 'jquery'
-    }),
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor', // 这公共代码的chunk名为'commons'
         filename: '[name].bundle.js', // 生成后的文件名，虽说用了[name]，但实际上就是'commons.bundle.js'了

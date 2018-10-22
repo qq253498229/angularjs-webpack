@@ -1,4 +1,8 @@
+'use strict';
+
 angular = require('angular');
-angular.module("app",[])
-    .controller("AppCtrl",  require('./controller'));
-// const appConfig = require('./app.config');
+require('angular-sanitize');
+require('oclazyload');
+require('ngstorage');
+
+require('./app');

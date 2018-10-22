@@ -3,8 +3,7 @@ var root = path.resolve(__dirname, '../');
 
 module.exports = {
     entry: {
-        'main': root + '/app/index.js',
-        jquery: ['jquery'],
+        'main': root + '/app/index.js'
     },
     module: {
         rules: [
