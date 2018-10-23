@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = ['$scope', function userListController($scope) {
+module.exports = ['$scope', function ($scope) {
     $scope.onInit = function () {
         console.log('hello user');
     };

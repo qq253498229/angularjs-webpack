@@ -18,21 +18,21 @@ var plugins = [
         minChunks: 3, // 设定要有4个chunk（即4个页面）加载的js模块才会被纳入公共代码。这数目自己考虑吧，我认为3-5比较合适。
     }),
     new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: 'index.html',
-            inject: true
+        filename: 'index.html',
+        template: 'index.html',
+        inject: true
     }),
     new webpack.HotModuleReplacementPlugin()
 ];
 baseconf.module.rules.push(
     {
         test: /\.css$/,
-        loader: ['style-loader','css-loader'],
+        loader: ['style-loader', 'css-loader'],
     }
 );
 module.exports = merge(baseconf, {
     output: {
-        path: root+"/dist",
+        path: root + "/dist",
         publicPath: "/",
         filename: "./js/[name].[chunkhash].js"
     },
