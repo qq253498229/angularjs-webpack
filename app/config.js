@@ -1,6 +1,11 @@
-module.exports.routing = ['$stateProvider', '$urlRouterProvider',
-    function ($stateProvider, $urlRouterProvider) {
+module.exports.routing = ['$locationProvider', '$stateProvider', '$urlRouterProvider',
+    function ($locationProvider, $stateProvider, $urlRouterProvider) {
         // $locationProvider.html5Mode(true);
-        $urlRouterProvider.otherwise('/user');
-    }]
-;
+        $urlRouterProvider.otherwise('/app/userList');
+        $stateProvider
+            .state('app', {
+                abstract: true,
+                url: '/app',
+                template: require('./common/layout.html')
+            });
+    }];

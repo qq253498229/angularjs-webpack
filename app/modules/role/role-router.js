@@ -1,8 +1,9 @@
-module.exports = function ($stateProvider) {
-    $stateProvider
-        .state('role', {
-            url: '/role',
-            controller: require('./role-list'),
-            template: require('./role-list.html')
-        });
-};
+module.exports = ['$stateProvider',
+    function ($stateProvider) {
+        $stateProvider
+            .state('app.roleList', {
+                url: '/roleList',
+                controller: require('./role-list'),
+                template: require('./role-list.html')
+            });
+    }];
