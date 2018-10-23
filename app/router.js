@@ -17,13 +17,8 @@ angular.module('app')
             $stateProvider
                 .state('user', {
                     url: '/user',
-                    controller: 'userListCtrl',
-                    template: require('./modules/user/user-list.html'),
-                    resolve: {
-                        loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                            return $ocLazyLoad.load(['UserListModule']);
-                        }]
-                    }
+                    controller: require('./modules/user/user-list'),
+                    template: require('./modules/user/user-list.html')
                 })
                 .state('role', {
                     url: '/role',
