@@ -1,8 +1,10 @@
 'use strict';
 
-angular = require('angular');
+require('angular');
 require('angular-sanitize');
-require('oclazyload');
 require('ngstorage');
+require('@uirouter/angularjs');
+require('oclazyload');
 
 require('./app');
+require('./router');
