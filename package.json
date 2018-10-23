@@ -1,7 +1,7 @@
 {
-  "name": "cgn",
+  "name": "test",
   "version": "1.0.0",
-  "description": "cgn hr",
+  "description": "angular webpack test",
   "author": "wangbin",
   "main": "index.js",
   "scripts": {
