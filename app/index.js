@@ -4,8 +4,7 @@ require('angular-animate');
 require('angular-touch');
 require('ngstorage');
 require('@uirouter/angularjs');
-
-
+require('angular-ui-bootstrap');
 require('./modules/user');
 require('./modules/role');
 
@@ -17,6 +16,7 @@ angular.module('app', [
     'ngSanitize',
     'ui.router',
     'ngStorage',
+    'ui.bootstrap',
     'user',
     'role'
 ])
@@ -26,6 +26,7 @@ angular.module('app', [
             $rootScope.$stateParams = $stateParams;
         }])
     .config(config.routing)
+    .config(config.compile)
     .controller("AppCtrl", appController)
 ;
 
