@@ -1,5 +1,7 @@
 require('angular');
 require('angular-sanitize');
+require('angular-animate');
+require('angular-touch');
 require('ngstorage');
 require('@uirouter/angularjs');
 
