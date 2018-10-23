@@ -21,6 +21,7 @@
     - [index.js](app/modules/role/index.js) 配置文件
     - [role-router.js](app/modules/role/role-router.js) 角色模块路由
     - [role-list.html](app/modules/role/role-list.html) 角色列表页面
+    - [role-list.js](app/modules/role/role-list.js) 角色列表控制器
 
 
 ## 使用说明
