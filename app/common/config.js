@@ -9,3 +9,7 @@ module.exports.routing = ['$locationProvider', '$stateProvider', '$urlRouterProv
                 template: require('./layout.html')
             });
     }];
+module.exports.compile = ['$compileProvider',
+    function ($compileProvider) {
+        $compileProvider.imgSrcSanitizationWhitelist(/^\s*(http|https|data|wxlocalresource|weixin):/);
+    }];

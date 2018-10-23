@@ -1,20 +1,22 @@
 require('angular');
 require('angular-sanitize');
+require('angular-animate');
+require('angular-touch');
 require('ngstorage');
 require('@uirouter/angularjs');
-
-
+require('angular-ui-bootstrap');
 require('./modules/user');
 require('./modules/role');
 
-const config = require('./common/config');
-const appController = require('./common/controller');
+config = require('./common/config');
+appController = require('./common/controller');
 
 
 angular.module('app', [
     'ngSanitize',
     'ui.router',
     'ngStorage',
+    'ui.bootstrap',
     'user',
     'role'
 ])
@@ -24,6 +26,7 @@ angular.module('app', [
             $rootScope.$stateParams = $stateParams;
         }])
     .config(config.routing)
+    .config(config.compile)
     .controller("AppCtrl", appController)
 ;
 
