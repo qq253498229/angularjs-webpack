@@ -6,6 +6,6 @@ module.exports.routing = ['$locationProvider', '$stateProvider', '$urlRouterProv
             .state('app', {
                 abstract: true,
                 url: '/app',
-                template: require('./common/layout.html')
+                template: require('./layout.html')
             });
     }];
