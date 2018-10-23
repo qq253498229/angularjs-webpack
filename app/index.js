@@ -7,8 +7,8 @@ require('@uirouter/angularjs');
 require('./modules/user');
 require('./modules/role');
 
-const config = require('./common/config');
-const appController = require('./common/controller');
+config = require('./common/config');
+appController = require('./common/controller');
 
 
 angular.module('app', [
